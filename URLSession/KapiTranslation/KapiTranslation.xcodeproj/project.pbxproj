@@ -11,9 +11,9 @@
 		3E44841224066ADB008740F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E44841124066ADB008740F2 /* SceneDelegate.swift */; };
 		3E44841424066ADB008740F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E44841324066ADB008740F2 /* ViewController.swift */; };
 		3E44841724066ADB008740F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E44841524066ADB008740F2 /* Main.storyboard */; };
-		3E44841A24066ADB008740F2 /* KapiTranslation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E44841824066ADB008740F2 /* KapiTranslation.xcdatamodeld */; };
 		3E44841C24066ADC008740F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E44841B24066ADC008740F2 /* Assets.xcassets */; };
 		3E44841F24066ADC008740F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E44841D24066ADC008740F2 /* LaunchScreen.storyboard */; };
+		3ED1052B2407B1F0008DCBC0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1052A2407B1F0008DCBC0 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +22,10 @@
 		3E44841124066ADB008740F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3E44841324066ADB008740F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E44841624066ADB008740F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3E44841924066ADB008740F2 /* KapiTranslation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KapiTranslation.xcdatamodel; sourceTree = "<group>"; };
 		3E44841B24066ADC008740F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E44841E24066ADC008740F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E44842024066ADC008740F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ED1052A2407B1F0008DCBC0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +60,46 @@
 			children = (
 				3E44840F24066ADB008740F2 /* AppDelegate.swift */,
 				3E44841124066ADB008740F2 /* SceneDelegate.swift */,
-				3E44841324066ADB008740F2 /* ViewController.swift */,
-				3E44841524066ADB008740F2 /* Main.storyboard */,
-				3E44841B24066ADC008740F2 /* Assets.xcassets */,
-				3E44841D24066ADC008740F2 /* LaunchScreen.storyboard */,
-				3E44842024066ADC008740F2 /* Info.plist */,
-				3E44841824066ADB008740F2 /* KapiTranslation.xcdatamodeld */,
+				3ED105262407B0AC008DCBC0 /* View Controllers */,
+				3ED105292407B1D7008DCBC0 /* Utility */,
+				3ED105272407B0D0008DCBC0 /* Resources */,
+				3ED105282407B0E7008DCBC0 /* Supporting Files */,
 			);
 			path = KapiTranslation;
+			sourceTree = "<group>";
+		};
+		3ED105262407B0AC008DCBC0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E44841324066ADB008740F2 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3ED105272407B0D0008DCBC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E44841B24066ADC008740F2 /* Assets.xcassets */,
+				3E44841524066ADB008740F2 /* Main.storyboard */,
+				3E44841D24066ADC008740F2 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3ED105282407B0E7008DCBC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E44842024066ADC008740F2 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3ED105292407B1D7008DCBC0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3ED1052A2407B1F0008DCBC0 /* Extension.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E44841A24066ADB008740F2 /* KapiTranslation.xcdatamodeld in Sources */,
 				3E44841424066ADB008740F2 /* ViewController.swift in Sources */,
 				3E44841024066ADB008740F2 /* AppDelegate.swift in Sources */,
 				3E44841224066ADB008740F2 /* SceneDelegate.swift in Sources */,
+				3ED1052B2407B1F0008DCBC0 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G5RZ7AYRC2;
-				INFOPLIST_FILE = KapiTranslation/Info.plist;
+				INFOPLIST_FILE = "KapiTranslation/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G5RZ7AYRC2;
-				INFOPLIST_FILE = KapiTranslation/Info.plist;
+				INFOPLIST_FILE = "KapiTranslation/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,19 +374,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3E44841824066ADB008740F2 /* KapiTranslation.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3E44841924066ADB008740F2 /* KapiTranslation.xcdatamodel */,
-			);
-			currentVersion = 3E44841924066ADB008740F2 /* KapiTranslation.xcdatamodel */;
-			path = KapiTranslation.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3E44840424066ADB008740F2 /* Project object */;
 }
