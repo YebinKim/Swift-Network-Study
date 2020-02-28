@@ -39,15 +39,6 @@ class ViewController: UIViewController {
     
     let queryService = QueryService()
     
-    lazy var downloadsSession: URLSession = {
-        let configuration =
-            URLSessionConfiguration.background(withIdentifier: "developer.VIVI.KapiTranslation.bgSession")
-        
-        return URLSession(configuration: configuration,
-                          delegate: self,
-                          delegateQueue: nil)
-    }()
-    
     lazy var tapRecognizer: UITapGestureRecognizer = {
         var recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         return recognizer
@@ -59,22 +50,9 @@ class ViewController: UIViewController {
         setStyle()
         
         initializePickerView()
+        initializeTextView()
         
-        DispatchQueue.main.async {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        }
-        
-        queryService.getTransResults(text: "안녕하세요", srcLan: "kr", targetLan: "en") { [weak self] result in
-            DispatchQueue.main.async {
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            }
-            
-            print(result)
-            
-//            if !errorMessage.isEmpty {
-//                print("Search error: " + errorMessage)
-//            }
-        }
+        registerGestureRecognizer()
     }
     
     private func setStyle() {
@@ -93,17 +71,38 @@ class ViewController: UIViewController {
         lanPicker.selectRow(1, inComponent: 1, animated: true)
     }
     
+    private func initializeTextView() {
+        originLanTextView.delegate = self
+        transLanTextView.delegate = self
+    }
+    
+    private func registerGestureRecognizer() {
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    private func translated() {
+        guard let text = originLanTextView.text, text != "" else {
+            transLanTextView.text = ""
+            return
+        }
+        
+        let srcLan = selectLanguage[lanPicker.selectedRow(inComponent: 0)].mark
+        let targetLan = selectLanguage[lanPicker.selectedRow(inComponent: 1)].mark
+        
+        queryService.getTransResults(text, srcLan: srcLan, targetLan: targetLan) { result in
+            DispatchQueue.main.async {
+                self.transLanTextView.text = result
+            }
+        }
+    }
+    
+    @IBAction func transButtonPressed(_ sender: UIButton) {
+        translated()
+    }
+    
     @objc func dismissKeyboard() {
         originLanTextView.resignFirstResponder()
         transLanTextView.resignFirstResponder()
-    }
-    
-}
-
-extension ViewController: URLSessionDownloadDelegate {
-    
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        
     }
     
 }
@@ -129,4 +128,16 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             transLanLabel.text = selectLanguage[row].lan
         }
     }
+}
+
+extension ViewController: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            translated()
+        }
+        return true
+    }
+    
 }

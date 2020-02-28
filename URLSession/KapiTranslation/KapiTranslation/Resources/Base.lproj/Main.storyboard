@@ -32,7 +32,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="입력" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wrZ-jK-m94">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="번역할 텍스트를 입력해주세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wrZ-jK-m94">
                                 <rect key="frame" x="20" y="228" width="374" height="200"/>
                                 <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -40,7 +40,7 @@
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecY-vZ-aDi">
                                 <rect key="frame" x="191" y="476" width="32" height="32"/>
@@ -52,6 +52,9 @@
                                 <state key="normal" image="arrow.down" catalog="system">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="transButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fOS-DL-gB4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1m-LB-9ay">
                                 <rect key="frame" x="189.5" y="556" width="35" height="24"/>
@@ -63,7 +66,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="출력" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-QM-jrI">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="번역된 텍스트가 출력됩니다." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-QM-jrI">
                                 <rect key="frame" x="20" y="596" width="374" height="200"/>
                                 <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>

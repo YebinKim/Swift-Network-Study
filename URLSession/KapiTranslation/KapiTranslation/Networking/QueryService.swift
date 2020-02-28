@@ -15,15 +15,11 @@ class QueryService {
     
     let apiKey = "7083584b8cb4305eb7610d0a8aedf340"
     
-    let transKey: String = "translated_text"
-    
     var errorMessage = ""
-    var transResults: [String] = []
     
-    typealias JSONDictionary = [String: Any]
     typealias QueryResult = (String) -> Void
     
-    func getTransResults(text: String, srcLan: String, targetLan: String, completion: @escaping QueryResult) {
+    func getTransResults(_ text: String, srcLan: String, targetLan: String, completion: @escaping QueryResult) {
         dataTask?.cancel()
         
         let headers = ["Authorization": "KakaoAK \(apiKey)"]
@@ -51,23 +47,5 @@ class QueryService {
         dataTask?.resume()
     }
     
-    private func updateSearchResults(_ data: Data) {
-        var response: JSONDictionary?
-        transResults.removeAll()
-        
-        do {
-            response = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
-        } catch let parseError as NSError {
-            errorMessage += "JSONSerialization error: \(parseError.localizedDescription)\n"
-            return
-        }
-        
-        guard let result = response!["translated_text"] as? String else {
-            errorMessage += "Dictionary does not contain translated_text key\n"
-            return
-        }
-        
-        transResults.append(result)
-    }
 }
 
