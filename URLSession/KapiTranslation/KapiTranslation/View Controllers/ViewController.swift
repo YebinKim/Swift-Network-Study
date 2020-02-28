@@ -37,12 +37,44 @@ class ViewController: UIViewController {
                                                          ("태국어", "th"),
                                                          ("터키어", "tr")]
     
+    let queryService = QueryService()
+    
+    lazy var downloadsSession: URLSession = {
+        let configuration =
+            URLSessionConfiguration.background(withIdentifier: "developer.VIVI.KapiTranslation.bgSession")
+        
+        return URLSession(configuration: configuration,
+                          delegate: self,
+                          delegateQueue: nil)
+    }()
+    
+    lazy var tapRecognizer: UITapGestureRecognizer = {
+        var recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        return recognizer
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setStyle()
         
         initializePickerView()
+        
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        }
+        
+        queryService.getTransResults(text: "안녕하세요", srcLan: "kr", targetLan: "en") { [weak self] result in
+            DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
+            
+            print(result)
+            
+//            if !errorMessage.isEmpty {
+//                print("Search error: " + errorMessage)
+//            }
+        }
     }
     
     private func setStyle() {
@@ -59,6 +91,19 @@ class ViewController: UIViewController {
         lanPicker.dataSource = self
         
         lanPicker.selectRow(1, inComponent: 1, animated: true)
+    }
+    
+    @objc func dismissKeyboard() {
+        originLanTextView.resignFirstResponder()
+        transLanTextView.resignFirstResponder()
+    }
+    
+}
+
+extension ViewController: URLSessionDownloadDelegate {
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        
     }
     
 }
