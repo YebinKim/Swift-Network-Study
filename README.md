@@ -4,7 +4,7 @@
 ## 1. URLSession
 > URLSession은 Apple의 Foundation framework에 포함된 클래스로, 표준 인터넷 프로토콜을 사용해 URL과 통신할 수 있는 API를 제공합니다. 
 
-### > Sample
+### > Example
 Apple ITunes에서 30초 프리뷰 음원을 다운받고 재생할 수 있는 간단한 음악 플레이어 앱을 개발합니다.
 
 ### > KapiTranslation
