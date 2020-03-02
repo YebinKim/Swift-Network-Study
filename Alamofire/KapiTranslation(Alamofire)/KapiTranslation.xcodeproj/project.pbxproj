@@ -16,6 +16,7 @@
 		3EBE803924091631004054A4 /* Translated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE803824091631004054A4 /* Translated.swift */; };
 		3ED1052B2407B1F0008DCBC0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED1052A2407B1F0008DCBC0 /* Extension.swift */; };
 		4069A2D914C9D01495CBD23B /* Pods_KapiTranslation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4884850F284D687D0AB0C0F7 /* Pods_KapiTranslation.framework */; };
+		C26BBB34240CD37000A7B233 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BBB33240CD37000A7B233 /* QueryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		3EBE803824091631004054A4 /* Translated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translated.swift; sourceTree = "<group>"; };
 		3ED1052A2407B1F0008DCBC0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		4884850F284D687D0AB0C0F7 /* Pods_KapiTranslation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KapiTranslation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26BBB33240CD37000A7B233 /* QueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		E3699700FE8C33E114C239D1 /* Pods-KapiTranslation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KapiTranslation.debug.xcconfig"; path = "Target Support Files/Pods-KapiTranslation/Pods-KapiTranslation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				3E44840F24066ADB008740F2 /* AppDelegate.swift */,
 				3E44841124066ADB008740F2 /* SceneDelegate.swift */,
 				3ED105262407B0AC008DCBC0 /* View Controllers */,
+				C26BBB32240CD35100A7B233 /* Networking */,
 				3EBE803724091614004054A4 /* Model */,
 				3ED105292407B1D7008DCBC0 /* Utility */,
 				3ED105272407B0D0008DCBC0 /* Resources */,
@@ -135,6 +138,14 @@
 				1A330927ACAAE1C90FEFF5FE /* Pods-KapiTranslation.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C26BBB32240CD35100A7B233 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C26BBB33240CD37000A7B233 /* QueryService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 				3E44841024066ADB008740F2 /* AppDelegate.swift in Sources */,
 				3EBE803924091631004054A4 /* Translated.swift in Sources */,
 				3E44841224066ADB008740F2 /* SceneDelegate.swift in Sources */,
+				C26BBB34240CD37000A7B233 /* QueryService.swift in Sources */,
 				3ED1052B2407B1F0008DCBC0 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
