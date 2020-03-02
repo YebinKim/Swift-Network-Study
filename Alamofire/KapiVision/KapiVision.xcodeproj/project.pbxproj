@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67A8BC18021522FA113A76F9 /* Pods_KapiVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CFB0D6F2EE7A4FDBC07A08 /* Pods_KapiVision.framework */; };
 		C26BBAF9240BEC9000A7B233 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BBAF8240BEC9000A7B233 /* AppDelegate.swift */; };
 		C26BBAFB240BEC9000A7B233 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BBAFA240BEC9000A7B233 /* SceneDelegate.swift */; };
 		C26BBAFD240BEC9000A7B233 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BBAFC240BEC9000A7B233 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C7921F1AE704AE4492F141C /* Pods-KapiVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KapiVision.release.xcconfig"; path = "Target Support Files/Pods-KapiVision/Pods-KapiVision.release.xcconfig"; sourceTree = "<group>"; };
+		7C485D8D80A08F8E8E029114 /* Pods-KapiVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KapiVision.debug.xcconfig"; path = "Target Support Files/Pods-KapiVision/Pods-KapiVision.debug.xcconfig"; sourceTree = "<group>"; };
+		A6CFB0D6F2EE7A4FDBC07A08 /* Pods_KapiVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KapiVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C26BBAF5240BEC9000A7B233 /* KapiVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KapiVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C26BBAF8240BEC9000A7B233 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C26BBAFA240BEC9000A7B233 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67A8BC18021522FA113A76F9 /* Pods_KapiVision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38DD6A0D049EBCE24B1E6844 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C485D8D80A08F8E8E029114 /* Pods-KapiVision.debug.xcconfig */,
+				0C7921F1AE704AE4492F141C /* Pods-KapiVision.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C26BBAEC240BEC9000A7B233 = {
 			isa = PBXGroup;
 			children = (
 				C26BBAF7240BEC9000A7B233 /* KapiVision */,
 				C26BBAF6240BEC9000A7B233 /* Products */,
+				38DD6A0D049EBCE24B1E6844 /* Pods */,
+				C79C2656E73D2D9D731B550B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +108,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C79C2656E73D2D9D731B550B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6CFB0D6F2EE7A4FDBC07A08 /* Pods_KapiVision.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C26BBB09240BEC9200A7B233 /* Build configuration list for PBXNativeTarget "KapiVision" */;
 			buildPhases = (
+				BFD00B9DEB1844601204D500 /* [CP] Check Pods Manifest.lock */,
 				C26BBAF1240BEC9000A7B233 /* Sources */,
 				C26BBAF2240BEC9000A7B233 /* Frameworks */,
 				C26BBAF3240BEC9000A7B233 /* Resources */,
+				3688D4A94C19533515757BD7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +183,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3688D4A94C19533515757BD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KapiVision/Pods-KapiVision-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KapiVision/Pods-KapiVision-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KapiVision/Pods-KapiVision-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFD00B9DEB1844601204D500 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KapiVision-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C26BBAF1240BEC9000A7B233 /* Sources */ = {
@@ -306,6 +375,7 @@
 		};
 		C26BBB0A240BEC9200A7B233 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C485D8D80A08F8E8E029114 /* Pods-KapiVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -324,6 +394,7 @@
 		};
 		C26BBB0B240BEC9200A7B233 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C7921F1AE704AE4492F141C /* Pods-KapiVision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

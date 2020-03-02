@@ -1,0 +1,6 @@
+framework module Pods_KapiVision {
+  umbrella header "Pods-KapiVision-umbrella.h"
+
+  export *
+  module * { export * }
+}
