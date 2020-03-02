@@ -10,12 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet var lanPicker: UIPickerView!
     @IBOutlet var originLanLabel: UILabel!
     @IBOutlet var originLanTextView: UITextView!
     @IBOutlet var transLanLabel: UILabel!
     @IBOutlet var transLanTextView: UITextView!
     @IBOutlet var transButton: UIButton!
+    
+    // MARK: - Properties
     
     let selectLanguage: [(lan: String, mark: String)] = [("한국어", "kr"),
                                                          ("영어", "en"),
@@ -44,6 +48,8 @@ class ViewController: UIViewController {
         return recognizer
     }()
     
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +61,8 @@ class ViewController: UIViewController {
         registerGestureRecognizer()
     }
     
+    // MARK: - Layouts
+    
     private func setStyle() {
         lanPicker.dropShadow()
         originLanLabel.dropShadow()
@@ -63,6 +71,8 @@ class ViewController: UIViewController {
         transLanTextView.dropShadow()
         transButton.dropShadow()
     }
+    
+    // MARK: - Initializing
     
     private func initializePickerView() {
         lanPicker.delegate = self
@@ -79,6 +89,8 @@ class ViewController: UIViewController {
     private func registerGestureRecognizer() {
         self.view.addGestureRecognizer(tapRecognizer)
     }
+    
+    // MARK: - Actions
     
     private func translated() {
         guard let text = originLanTextView.text, text != "" else {
@@ -109,6 +121,8 @@ class ViewController: UIViewController {
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
+    // MARK: - UIPickerViewDelegate
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
@@ -131,6 +145,8 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 }
 
 extension ViewController: UITextViewDelegate {
+    
+    // MARK: - UITextViewDelegate
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {

@@ -10,7 +10,11 @@ import Foundation
 
 struct Translated: Codable {
     
+    // MARK: - Properties
+    
     let translatedText: [[String]]
+    
+    // MARK: - Codable Coding Key
     
     enum CodingKeys: String, CodingKey {
         case translatedText = "translated_text"
