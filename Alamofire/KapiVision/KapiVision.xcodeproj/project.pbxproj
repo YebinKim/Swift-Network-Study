@@ -16,6 +16,7 @@
 		C26BBB05240BEC9200A7B233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26BBB03240BEC9200A7B233 /* LaunchScreen.storyboard */; };
 		C26F1217240E024E006AB30B /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F1216240E024E006AB30B /* QueryService.swift */; };
 		C26F1219240E0297006AB30B /* Multitag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F1218240E0297006AB30B /* Multitag.swift */; };
+		C2BA2358240E7F18008EFAE8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BA2357240E7F18008EFAE8 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C26BBB06240BEC9200A7B233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C26F1216240E024E006AB30B /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 		C26F1218240E0297006AB30B /* Multitag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multitag.swift; sourceTree = "<group>"; };
+		C2BA2357240E7F18008EFAE8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				C26BBB0C240BECE200A7B233 /* View Controllers */,
 				C26F1214240DFE89006AB30B /* Networking */,
 				C26F1215240DFE9C006AB30B /* Model */,
+				C2BA2356240E7F04008EFAE8 /* Utility */,
 				C26BBB0D240BECFB00A7B233 /* Resources */,
 				C26BBB0E240BED2900A7B233 /* Supporting Files */,
 			);
@@ -127,6 +130,14 @@
 				C26F1218240E0297006AB30B /* Multitag.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C2BA2356240E7F04008EFAE8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C2BA2357240E7F18008EFAE8 /* Extension.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		C79C2656E73D2D9D731B550B /* Frameworks */ = {
@@ -255,6 +266,7 @@
 				C26F1217240E024E006AB30B /* QueryService.swift in Sources */,
 				C26BBAFD240BEC9000A7B233 /* ViewController.swift in Sources */,
 				C26F1219240E0297006AB30B /* Multitag.swift in Sources */,
+				C2BA2358240E7F18008EFAE8 /* Extension.swift in Sources */,
 				C26BBAF9240BEC9000A7B233 /* AppDelegate.swift in Sources */,
 				C26BBAFB240BEC9000A7B233 /* SceneDelegate.swift in Sources */,
 			);

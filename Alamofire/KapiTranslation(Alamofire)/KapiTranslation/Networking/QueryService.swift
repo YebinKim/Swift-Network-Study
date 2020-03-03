@@ -15,18 +15,11 @@ class QueryService {
     
     let apiKey = "7083584b8cb4305eb7610d0a8aedf340"
     
-    let defaultSession = URLSession(configuration: .default)
-    var dataTask: URLSessionDataTask?
-    
-    var errorMessage = ""
-    
     typealias QueryResult = (String) -> Void
     
     // MARK: - Actions
     
     func getTransResults(_ text: String, srcLan: String, targetLan: String, completion: @escaping QueryResult) {
-        dataTask?.cancel()
-        
         let headers = ["Authorization": "KakaoAK \(apiKey)"] as HTTPHeaders
         let text = text.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         var url = "https://kapi.kakao.com/v1/translation/translate"
@@ -38,7 +31,7 @@ class QueryService {
           .validate()
           .responseDecodable(of: Translated.self) { response in
             guard let translated = response.value else { return }
-            completion(translated.translatedText.first?.first ?? self.errorMessage)
+            completion(translated.translatedText.first?.first ?? "translated error")
         }
     }
     

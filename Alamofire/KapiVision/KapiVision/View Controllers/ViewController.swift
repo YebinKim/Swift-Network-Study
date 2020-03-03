@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var pictureSelectButton: UIButton!
     @IBOutlet weak var tagStackView: UIStackView!
     
-//    let queryService = QueryService()
+    let queryService = QueryService()
     
     let imagePicker = UIImagePickerController()
     
@@ -57,6 +57,10 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = image
+            
+            queryService.getMultitagResults(image) { (result) in
+                print(result)
+            }
         }
         dismiss(animated: true, completion: nil)
     }
