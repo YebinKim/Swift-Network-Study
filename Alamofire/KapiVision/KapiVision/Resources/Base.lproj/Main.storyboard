@@ -51,6 +51,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZP-y2-x3Y">
                                 <rect key="frame" x="179" y="600.5" width="56" height="30"/>
                                 <state key="normal" title="사진 선택"/>
+                                <connections>
+                                    <action selector="pictureSelectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mlg-IW-YiA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -95,15 +98,15 @@
                                 <exclude reference="XDi-pg-v3M"/>
                                 <exclude reference="iX2-is-YdE"/>
                                 <exclude reference="k97-e0-N1w"/>
+                                <exclude reference="IOR-ho-HCB"/>
+                                <exclude reference="JHZ-mh-jBp"/>
+                                <exclude reference="Ysj-p3-UiB"/>
+                                <exclude reference="efQ-EA-84l"/>
                                 <exclude reference="Aoq-aw-dcX"/>
                                 <exclude reference="B7G-cq-gLa"/>
                                 <exclude reference="S73-ue-Ezs"/>
                                 <exclude reference="WNd-13-eTz"/>
                                 <exclude reference="rW6-c5-2Ej"/>
-                                <exclude reference="IOR-ho-HCB"/>
-                                <exclude reference="JHZ-mh-jBp"/>
-                                <exclude reference="Ysj-p3-UiB"/>
-                                <exclude reference="efQ-EA-84l"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -123,15 +126,15 @@
                                 <include reference="XDi-pg-v3M"/>
                                 <exclude reference="iX2-is-YdE"/>
                                 <exclude reference="k97-e0-N1w"/>
+                                <exclude reference="IOR-ho-HCB"/>
+                                <exclude reference="JHZ-mh-jBp"/>
+                                <include reference="Ysj-p3-UiB"/>
+                                <include reference="efQ-EA-84l"/>
                                 <exclude reference="Aoq-aw-dcX"/>
                                 <exclude reference="B7G-cq-gLa"/>
                                 <include reference="S73-ue-Ezs"/>
                                 <exclude reference="WNd-13-eTz"/>
                                 <include reference="rW6-c5-2Ej"/>
-                                <exclude reference="IOR-ho-HCB"/>
-                                <exclude reference="JHZ-mh-jBp"/>
-                                <include reference="Ysj-p3-UiB"/>
-                                <include reference="efQ-EA-84l"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
@@ -140,10 +143,10 @@
                                 <include reference="pOa-19-qwv"/>
                                 <include reference="BzD-GM-yXR"/>
                                 <include reference="XDi-pg-v3M"/>
-                                <include reference="S73-ue-Ezs"/>
-                                <include reference="rW6-c5-2Ej"/>
                                 <include reference="Ysj-p3-UiB"/>
                                 <include reference="efQ-EA-84l"/>
+                                <include reference="S73-ue-Ezs"/>
+                                <include reference="rW6-c5-2Ej"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -159,11 +162,11 @@
                                 <include reference="MJ4-m7-LQb"/>
                                 <include reference="iX2-is-YdE"/>
                                 <include reference="k97-e0-N1w"/>
+                                <include reference="IOR-ho-HCB"/>
+                                <include reference="JHZ-mh-jBp"/>
                                 <include reference="Aoq-aw-dcX"/>
                                 <include reference="B7G-cq-gLa"/>
                                 <include reference="WNd-13-eTz"/>
-                                <include reference="IOR-ho-HCB"/>
-                                <include reference="JHZ-mh-jBp"/>
                             </mask>
                         </variation>
                     </view>
