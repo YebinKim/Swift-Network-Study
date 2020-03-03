@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		C26BBB00240BEC9000A7B233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26BBAFE240BEC9000A7B233 /* Main.storyboard */; };
 		C26BBB02240BEC9200A7B233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C26BBB01240BEC9200A7B233 /* Assets.xcassets */; };
 		C26BBB05240BEC9200A7B233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26BBB03240BEC9200A7B233 /* LaunchScreen.storyboard */; };
+		C26F1217240E024E006AB30B /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F1216240E024E006AB30B /* QueryService.swift */; };
+		C26F1219240E0297006AB30B /* Multitag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F1218240E0297006AB30B /* Multitag.swift */; };
+		C2BA2358240E7F18008EFAE8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BA2357240E7F18008EFAE8 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		C26BBB01240BEC9200A7B233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C26BBB04240BEC9200A7B233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C26BBB06240BEC9200A7B233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C26F1216240E024E006AB30B /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
+		C26F1218240E0297006AB30B /* Multitag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multitag.swift; sourceTree = "<group>"; };
+		C2BA2357240E7F18008EFAE8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +54,6 @@
 				7C485D8D80A08F8E8E029114 /* Pods-KapiVision.debug.xcconfig */,
 				0C7921F1AE704AE4492F141C /* Pods-KapiVision.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -76,6 +81,9 @@
 				C26BBAF8240BEC9000A7B233 /* AppDelegate.swift */,
 				C26BBAFA240BEC9000A7B233 /* SceneDelegate.swift */,
 				C26BBB0C240BECE200A7B233 /* View Controllers */,
+				C26F1214240DFE89006AB30B /* Networking */,
+				C26F1215240DFE9C006AB30B /* Model */,
+				C2BA2356240E7F04008EFAE8 /* Utility */,
 				C26BBB0D240BECFB00A7B233 /* Resources */,
 				C26BBB0E240BED2900A7B233 /* Supporting Files */,
 			);
@@ -106,6 +114,30 @@
 				C26BBB06240BEC9200A7B233 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C26F1214240DFE89006AB30B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C26F1216240E024E006AB30B /* QueryService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C26F1215240DFE9C006AB30B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C26F1218240E0297006AB30B /* Multitag.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2BA2356240E7F04008EFAE8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C2BA2357240E7F18008EFAE8 /* Extension.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		C79C2656E73D2D9D731B550B /* Frameworks */ = {
@@ -231,7 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26F1217240E024E006AB30B /* QueryService.swift in Sources */,
 				C26BBAFD240BEC9000A7B233 /* ViewController.swift in Sources */,
+				C26F1219240E0297006AB30B /* Multitag.swift in Sources */,
+				C2BA2358240E7F18008EFAE8 /* Extension.swift in Sources */,
 				C26BBAF9240BEC9000A7B233 /* AppDelegate.swift in Sources */,
 				C26BBAFB240BEC9000A7B233 /* SceneDelegate.swift in Sources */,
 			);
