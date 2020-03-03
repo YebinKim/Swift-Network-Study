@@ -24,18 +24,18 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태그를 생성할 이미지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ist-gv-NVn">
                                 <rect key="frame" x="97" y="100" width="181" height="26.666666666666671"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TI1-av-AAp">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TI1-av-AAp">
                                 <rect key="frame" x="24" y="631.66666666666663" width="327" height="2.3333333333333712"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="750" constant="368" id="F2A-is-91l"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZP-y2-x3Y">
-                                <rect key="frame" x="159.66666666666663" y="561.66666666666663" width="56" height="30"/>
+                                <rect key="frame" x="159.66666666666666" y="561.66666666666663" width="56" height="30"/>
                                 <state key="normal" title="사진 선택"/>
                                 <connections>
                                     <action selector="pictureSelectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mlg-IW-YiA"/>
@@ -74,6 +74,7 @@
                             <mask key="constraints">
                                 <exclude reference="1QD-Y4-B20"/>
                                 <exclude reference="SXn-eF-dVT"/>
+                                <exclude reference="7bK-dN-uQf"/>
                                 <exclude reference="Myb-P7-fcN"/>
                                 <exclude reference="dW0-ly-oMf"/>
                                 <exclude reference="pOa-19-qwv"/>
@@ -83,13 +84,14 @@
                                 <exclude reference="XDi-pg-v3M"/>
                                 <exclude reference="iX2-is-YdE"/>
                                 <exclude reference="k97-e0-N1w"/>
-                                <exclude reference="Aoq-aw-dcX"/>
-                                <exclude reference="B7G-cq-gLa"/>
-                                <exclude reference="WNd-13-eTz"/>
-                                <exclude reference="rW6-c5-2Ej"/>
                                 <exclude reference="IOR-ho-HCB"/>
                                 <exclude reference="JHZ-mh-jBp"/>
                                 <exclude reference="efQ-EA-84l"/>
+                                <exclude reference="Aoq-aw-dcX"/>
+                                <exclude reference="B7G-cq-gLa"/>
+                                <exclude reference="WNd-13-eTz"/>
+                                <exclude reference="eBx-Jk-6XK"/>
+                                <exclude reference="rW6-c5-2Ej"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -99,6 +101,7 @@
                             <mask key="constraints">
                                 <exclude reference="1QD-Y4-B20"/>
                                 <exclude reference="SXn-eF-dVT"/>
+                                <include reference="7bK-dN-uQf"/>
                                 <exclude reference="Myb-P7-fcN"/>
                                 <exclude reference="dW0-ly-oMf"/>
                                 <include reference="pOa-19-qwv"/>
@@ -108,13 +111,14 @@
                                 <include reference="XDi-pg-v3M"/>
                                 <exclude reference="iX2-is-YdE"/>
                                 <exclude reference="k97-e0-N1w"/>
-                                <exclude reference="Aoq-aw-dcX"/>
-                                <exclude reference="B7G-cq-gLa"/>
-                                <exclude reference="WNd-13-eTz"/>
-                                <include reference="rW6-c5-2Ej"/>
                                 <exclude reference="IOR-ho-HCB"/>
                                 <exclude reference="JHZ-mh-jBp"/>
                                 <include reference="efQ-EA-84l"/>
+                                <exclude reference="Aoq-aw-dcX"/>
+                                <exclude reference="B7G-cq-gLa"/>
+                                <exclude reference="WNd-13-eTz"/>
+                                <include reference="eBx-Jk-6XK"/>
+                                <include reference="rW6-c5-2Ej"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
@@ -122,8 +126,8 @@
                                 <include reference="pOa-19-qwv"/>
                                 <include reference="BzD-GM-yXR"/>
                                 <include reference="XDi-pg-v3M"/>
-                                <include reference="rW6-c5-2Ej"/>
                                 <include reference="efQ-EA-84l"/>
+                                <include reference="rW6-c5-2Ej"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -133,17 +137,19 @@
                             <mask key="constraints">
                                 <include reference="1QD-Y4-B20"/>
                                 <include reference="SXn-eF-dVT"/>
+                                <exclude reference="7bK-dN-uQf"/>
                                 <include reference="Myb-P7-fcN"/>
                                 <include reference="dW0-ly-oMf"/>
                                 <include reference="rzO-VG-ciO"/>
                                 <include reference="MJ4-m7-LQb"/>
                                 <include reference="iX2-is-YdE"/>
                                 <include reference="k97-e0-N1w"/>
+                                <include reference="IOR-ho-HCB"/>
+                                <include reference="JHZ-mh-jBp"/>
                                 <include reference="Aoq-aw-dcX"/>
                                 <include reference="B7G-cq-gLa"/>
                                 <include reference="WNd-13-eTz"/>
-                                <include reference="IOR-ho-HCB"/>
-                                <include reference="JHZ-mh-jBp"/>
+                                <exclude reference="eBx-Jk-6XK"/>
                             </mask>
                         </variation>
                     </view>
