@@ -12,6 +12,8 @@ import Photos
 
 class ViewController: UIViewController {
     
+    // MARK: - Properties
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pictureSelectButton: UIButton!
@@ -20,12 +22,32 @@ class ViewController: UIViewController {
     let queryService = QueryService()
     
     let imagePicker = UIImagePickerController()
+    var selectedImage: UIImage? {
+        didSet {
+            guard let image = selectedImage else { return }
+            
+            self.queryService.getMultitagResults(image) { (results) in
+                for result in results {
+                    let tagLabel = self.createTagLabel("#\(result)")
+                    
+                    DispatchQueue.main.async {
+                        self.imageView.image = image
+                        self.tagStackView.addArrangedSubview(tagLabel)
+                    }
+                }
+            }
+        }
+    }
+    
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initializeImagePicker()
     }
+    
+    // MARK: - Initializing Methods
     
     private func initializeImagePicker() {
         imagePicker.delegate = self
@@ -39,6 +61,8 @@ class ViewController: UIViewController {
         
         return label
     }
+    
+    // MARK: - Actions
     
     private func addAlert() {
         let alert =  UIAlertController(title: "태그를 생성할 사진 선택하기", message: nil, preferredStyle: .actionSheet)
@@ -72,32 +96,20 @@ class ViewController: UIViewController {
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    // MARK: - UIImagePickerControllerDelegate
+    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        DispatchQueue.main.async {
-            self.removeTagStackView()
-        }
-        
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            
+        dismiss(animated: true) {
             DispatchQueue.main.async {
-                self.imageView.image = image
+                self.removeTagStackView()
             }
             
-            DispatchQueue.global().async {
-                self.queryService.getMultitagResults(image) { (results) in
-                    for result in results {
-                        let tagLabel = self.createTagLabel("#\(result)")
-                        
-                        DispatchQueue.main.async {
-                            self.tagStackView.addArrangedSubview(tagLabel)
-                        }
-                    }
-                }
+            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                self.selectedImage = image
             }
         }
-        dismiss(animated: true, completion: nil)
     }
     
     func openGallery(){
