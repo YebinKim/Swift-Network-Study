@@ -22,6 +22,22 @@ class ViewController: UIViewController {
     let queryService = QueryService()
     
     let imagePicker = UIImagePickerController()
+    var selectedImage: UIImage? {
+        didSet {
+            guard let image = selectedImage else { return }
+            
+            self.queryService.getMultitagResults(image) { (results) in
+                for result in results {
+                    let tagLabel = self.createTagLabel("#\(result)")
+                    
+                    DispatchQueue.main.async {
+                        self.imageView.image = image
+                        self.tagStackView.addArrangedSubview(tagLabel)
+                    }
+                }
+            }
+        }
+    }
     
     // MARK: - Life Cycle
     
@@ -85,29 +101,15 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        DispatchQueue.main.async {
-            self.removeTagStackView()
-        }
-        
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            
+        dismiss(animated: true) {
             DispatchQueue.main.async {
-                self.imageView.image = image
+                self.removeTagStackView()
             }
             
-            DispatchQueue.global().async {
-                self.queryService.getMultitagResults(image) { (results) in
-                    for result in results {
-                        let tagLabel = self.createTagLabel("#\(result)")
-                        
-                        DispatchQueue.main.async {
-                            self.tagStackView.addArrangedSubview(tagLabel)
-                        }
-                    }
-                }
+            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                self.selectedImage = image
             }
         }
-        dismiss(animated: true, completion: nil)
     }
     
     func openGallery(){
