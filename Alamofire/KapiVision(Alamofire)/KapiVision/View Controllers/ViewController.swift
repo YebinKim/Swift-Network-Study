@@ -12,6 +12,8 @@ import Photos
 
 class ViewController: UIViewController {
     
+    // MARK: - Properties
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pictureSelectButton: UIButton!
@@ -21,11 +23,15 @@ class ViewController: UIViewController {
     
     let imagePicker = UIImagePickerController()
     
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initializeImagePicker()
     }
+    
+    // MARK: - Initializing Methods
     
     private func initializeImagePicker() {
         imagePicker.delegate = self
@@ -39,6 +45,8 @@ class ViewController: UIViewController {
         
         return label
     }
+    
+    // MARK: - Actions
     
     private func addAlert() {
         let alert =  UIAlertController(title: "태그를 생성할 사진 선택하기", message: nil, preferredStyle: .actionSheet)
@@ -71,6 +79,8 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // MARK: - UIImagePickerControllerDelegate
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
