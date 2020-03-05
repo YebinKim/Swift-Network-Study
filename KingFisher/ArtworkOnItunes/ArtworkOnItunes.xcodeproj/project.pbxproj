@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E95D8B052823EC203BF9322 /* Pods_ArtworkOnItunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1377B6497A01CBB40A043F7C /* Pods_ArtworkOnItunes.framework */; };
+		C23479DF241113A000F99828 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23479DE241113A000F99828 /* TrackCell.swift */; };
 		C2EB364E2410FE7800F9079F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EB364D2410FE7800F9079F /* AppDelegate.swift */; };
 		C2EB36502410FE7800F9079F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EB364F2410FE7800F9079F /* SceneDelegate.swift */; };
 		C2EB36522410FE7800F9079F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EB36512410FE7800F9079F /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		1377B6497A01CBB40A043F7C /* Pods_ArtworkOnItunes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtworkOnItunes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3524254EC1C487F8A8CA420C /* Pods-ArtworkOnItunes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworkOnItunes.release.xcconfig"; path = "Target Support Files/Pods-ArtworkOnItunes/Pods-ArtworkOnItunes.release.xcconfig"; sourceTree = "<group>"; };
 		A49162B2DE3083548FA12FA2 /* Pods-ArtworkOnItunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworkOnItunes.debug.xcconfig"; path = "Target Support Files/Pods-ArtworkOnItunes/Pods-ArtworkOnItunes.debug.xcconfig"; sourceTree = "<group>"; };
+		C23479DE241113A000F99828 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		C2EB364A2410FE7800F9079F /* ArtworkOnItunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtworkOnItunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EB364D2410FE7800F9079F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2EB364F2410FE7800F9079F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C23479DD2411138B00F99828 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C23479DE241113A000F99828 /* TrackCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C2EB36412410FE7800F9079F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 				C2EB364D2410FE7800F9079F /* AppDelegate.swift */,
 				C2EB364F2410FE7800F9079F /* SceneDelegate.swift */,
 				C2EB366124110B0D00F9079F /* View Controllers */,
+				C23479DD2411138B00F99828 /* Cells */,
 				C2EB366224110C5500F9079F /* Resources */,
 				C2EB366324110C7B00F9079F /* Supporting Files */,
 			);
@@ -233,6 +244,7 @@
 				C2EB36522410FE7800F9079F /* ViewController.swift in Sources */,
 				C2EB364E2410FE7800F9079F /* AppDelegate.swift in Sources */,
 				C2EB36502410FE7800F9079F /* SceneDelegate.swift in Sources */,
+				C23479DF241113A000F99828 /* TrackCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
