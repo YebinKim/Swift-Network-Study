@@ -1,0 +1,6 @@
+framework module Pods_ArtworkOnItunes {
+  umbrella header "Pods-ArtworkOnItunes-umbrella.h"
+
+  export *
+  module * { export * }
+}
