@@ -71,6 +71,8 @@ class TrackCell: UITableViewCell {
     // MARK: - Internal Methods
     
     func configure(track: Track, downloaded: Bool, download: Download?) {
+        thumbnailImageView.kf.setImage(with: track.artworkURL)
+        
         titleLabel.text = track.name
         artistLabel.text = track.artist
         

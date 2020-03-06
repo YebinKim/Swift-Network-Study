@@ -17,12 +17,12 @@ class Track: Codable {
     var downloaded: Bool = false
     let index: Int
     
-    let artworkURL: URL?
+    let artworkURL: URL
     let name: String
     let artist: String
     let previewURL: URL
     
-    init(artworkURL: URL?, name: String, artist: String, previewURL: URL, index: Int) {
+    init(artworkURL: URL, name: String, artist: String, previewURL: URL, index: Int) {
         self.artworkURL = artworkURL
         self.name = name
         self.artist = artist

@@ -79,12 +79,14 @@ class QueryService {
         
         for result in results {
             if let result = result as? JSONDictionary,
+                let artworkURLString = result["artworkUrl100"] as? String,
+                let artworkURL = URL(string: artworkURLString),
                 let name = result["trackName"] as? String,
                 let artist = result["artistName"] as? String,
                 let previewURLString = result["previewUrl"] as? String,
                 let previewURL = URL(string: previewURLString) {
                 
-                tracks.append(Track(artworkURL: nil, name: name, artist: artist, previewURL: previewURL, index: index))
+                tracks.append(Track(artworkURL: artworkURL, name: name, artist: artist, previewURL: previewURL, index: index))
                 index += 1
                 
             } else {
