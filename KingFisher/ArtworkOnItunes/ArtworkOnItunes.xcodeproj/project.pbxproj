@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0E95D8B052823EC203BF9322 /* Pods_ArtworkOnItunes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1377B6497A01CBB40A043F7C /* Pods_ArtworkOnItunes.framework */; };
 		C23479DF241113A000F99828 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23479DE241113A000F99828 /* TrackCell.swift */; };
+		C23479E424113D5F00F99828 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23479E224113D5F00F99828 /* Track.swift */; };
+		C23479E524113D5F00F99828 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23479E324113D5F00F99828 /* Download.swift */; };
+		C23479E824113E2A00F99828 /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23479E624113E2A00F99828 /* QueryService.swift */; };
+		C23479E924113E2A00F99828 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23479E724113E2A00F99828 /* DownloadService.swift */; };
 		C2EB364E2410FE7800F9079F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EB364D2410FE7800F9079F /* AppDelegate.swift */; };
 		C2EB36502410FE7800F9079F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EB364F2410FE7800F9079F /* SceneDelegate.swift */; };
 		C2EB36522410FE7800F9079F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EB36512410FE7800F9079F /* ViewController.swift */; };
@@ -22,6 +26,10 @@
 		3524254EC1C487F8A8CA420C /* Pods-ArtworkOnItunes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworkOnItunes.release.xcconfig"; path = "Target Support Files/Pods-ArtworkOnItunes/Pods-ArtworkOnItunes.release.xcconfig"; sourceTree = "<group>"; };
 		A49162B2DE3083548FA12FA2 /* Pods-ArtworkOnItunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworkOnItunes.debug.xcconfig"; path = "Target Support Files/Pods-ArtworkOnItunes/Pods-ArtworkOnItunes.debug.xcconfig"; sourceTree = "<group>"; };
 		C23479DE241113A000F99828 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		C23479E224113D5F00F99828 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		C23479E324113D5F00F99828 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		C23479E624113E2A00F99828 /* QueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
+		C23479E724113E2A00F99828 /* DownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		C2EB364A2410FE7800F9079F /* ArtworkOnItunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtworkOnItunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EB364D2410FE7800F9079F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2EB364F2410FE7800F9079F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +77,24 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		C23479E024113D1F00F99828 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C23479E724113E2A00F99828 /* DownloadService.swift */,
+				C23479E624113E2A00F99828 /* QueryService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C23479E124113D2D00F99828 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C23479E224113D5F00F99828 /* Track.swift */,
+				C23479E324113D5F00F99828 /* Download.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C2EB36412410FE7800F9079F = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +119,8 @@
 				C2EB364D2410FE7800F9079F /* AppDelegate.swift */,
 				C2EB364F2410FE7800F9079F /* SceneDelegate.swift */,
 				C2EB366124110B0D00F9079F /* View Controllers */,
+				C23479E024113D1F00F99828 /* Networking */,
+				C23479E124113D2D00F99828 /* Models */,
 				C23479DD2411138B00F99828 /* Cells */,
 				C2EB366224110C5500F9079F /* Resources */,
 				C2EB366324110C7B00F9079F /* Supporting Files */,
@@ -242,7 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2EB36522410FE7800F9079F /* ViewController.swift in Sources */,
+				C23479E924113E2A00F99828 /* DownloadService.swift in Sources */,
+				C23479E424113D5F00F99828 /* Track.swift in Sources */,
 				C2EB364E2410FE7800F9079F /* AppDelegate.swift in Sources */,
+				C23479E524113D5F00F99828 /* Download.swift in Sources */,
+				C23479E824113E2A00F99828 /* QueryService.swift in Sources */,
 				C2EB36502410FE7800F9079F /* SceneDelegate.swift in Sources */,
 				C23479DF241113A000F99828 /* TrackCell.swift in Sources */,
 			);

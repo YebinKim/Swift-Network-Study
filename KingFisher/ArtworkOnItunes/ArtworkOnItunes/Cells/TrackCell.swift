@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 // MARK: - Track Cell Delegate Protocol
 
 protocol TrackCellDelegate {
     
-    func cancelTapped(_ cell: TrackCell)
     func downloadTapped(_ cell: TrackCell)
     func pauseTapped(_ cell: TrackCell)
+    func cancelTapped(_ cell: TrackCell)
     func resumeTapped(_ cell: TrackCell)
     
 }
@@ -65,6 +66,39 @@ class TrackCell: UITableViewCell {
         } else {
             delegate?.resumeTapped(self)
         }
+    }
+    
+    // MARK: - Internal Methods
+    
+    func configure(track: Track, downloaded: Bool, download: Download?) {
+        titleLabel.text = track.name
+        artistLabel.text = track.artist
+        
+        // Show/hide download controls Pause/Resume, Cancel buttons, progress info.
+        var showDownloadControls = false
+        
+        // Non-nil Download object means a download is in progress.
+        if let download = download {
+            let title = download.isDownloading ? "Pause" : "Resume"
+            pauseButton.setTitle(title, for: .normal)
+            showDownloadControls = true
+            
+            progressLabel.text = download.isDownloading ? "Downloading..." : "Paused"
+            progressView.isHidden = !showDownloadControls
+            progressLabel.isHidden = !showDownloadControls
+        }
+        
+        pauseButton.isHidden = !showDownloadControls
+        cancelButton.isHidden = !showDownloadControls
+        
+        // If the track is already downloaded, enable cell selection and hide the Download button.
+        selectionStyle = downloaded ? UITableViewCell.SelectionStyle.gray : UITableViewCell.SelectionStyle.none
+        downloadButton.isHidden = downloaded || showDownloadControls
+    }
+    
+    func updateDisplay(progress: Float, totalSize : String) {
+        progressView.progress = progress
+        progressLabel.text = String(format: "%.1f%% of %@", progress * 100, totalSize)
     }
     
 }
